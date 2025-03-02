@@ -5,6 +5,7 @@ import "dotenv/config";
 //db connection
 import connectDB from "./config/db.js";
 import connectCloudinary from "./config/cloudinary.js";
+import adminRouter from "./routes/adminRoute.js";
 
 // app config
 const app = express();
@@ -16,9 +17,7 @@ app.use(express.json());
 app.use(cors());
 
 // api endpoints
-app.get("/", (req, res) => {
-  res.send("Hello doctor!");
-});
+app.use('/api/admin',adminRouter)
 
 // Port
 const port = process.env.PORT || 5000;
