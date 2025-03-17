@@ -228,6 +228,7 @@ const cancelAppointment = async (req, res) => {
   }
 };
 
+
 export {
   registerUser,
   loginUser,
