@@ -24,7 +24,11 @@ app.use("/api/doctor", doctorRouter);
 app.use("/api/user", userRouter);
 
 // Port
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 7666;
 app.listen(port, () => {
   console.log(`Server is running on ${port}...`);
 });
+
+app.use((req,res)=>{
+  res.send("API is running...")
+})
